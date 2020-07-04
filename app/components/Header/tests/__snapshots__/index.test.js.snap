@@ -17,7 +17,7 @@ exports[`<Header /> should render and match the snapshot 1`] = `
         class="T__StyledText-gjlic1-0 fCtbeZ Header__Title-wp2jxc-2 fnXlwC"
         data-testid="t"
       >
-        Wednesday Solutions
+        tuneSearch.io
       </p>
     </header>
   </div>

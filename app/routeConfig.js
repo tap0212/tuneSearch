@@ -7,7 +7,7 @@ export const routeConfig = {
     route: '/',
     // add props to pass to HomeContainer
     props: {
-      maxwidth: 500,
+      maxwidth: 800,
       padding: 20
     },
     exact: true

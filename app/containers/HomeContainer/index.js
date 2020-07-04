@@ -55,7 +55,7 @@ export function HomeContainer({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const loaded = get(reposData, 'items', null) || reposError;
+    const loaded = get(reposData, 'results', null) || reposError;
     if (loading && loaded) {
       setLoading(false);
     }
@@ -81,7 +81,7 @@ export function HomeContainer({
   const debouncedHandleOnChange = debounce(handleOnChange, 200);
 
   const renderRepoList = () => {
-    const items = get(reposData, 'items', []);
+    const items = get(reposData, 'results', []);
     const totalCount = get(reposData, 'totalCount', 0);
     return (
       (items.length !== 0 || loading) && (
@@ -99,9 +99,11 @@ export function HomeContainer({
             )}
             {items.map((item, index) => (
               <CustomCard key={index}>
-                <div>Repository Name: {item.name}</div>
-                <div>Repository Full Name: {item.fullName}</div>
-                <div>Repository stars: {item.stargazersCount}</div>
+                <div>Tune Name: {item.trackName}</div>
+                <div>Artist Name: {item.artistName}</div>
+                <div>
+                  Tune Link:<a href={item.trackViewUrl}>Listen Now</a>
+                </div>
               </CustomCard>
             ))}
           </Skeleton>
@@ -167,7 +169,7 @@ HomeContainer.propTypes = {
 };
 
 HomeContainer.defaultProps = {
-  maxwidth: 500,
+  maxwidth: 800,
   padding: 20
 };
 
