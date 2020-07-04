@@ -1,5 +1,6 @@
-# React Template
+# Tune Search
 
+![alt text](https://github.com/tap0212/tuneSearch/blob/master/tuneSearch.gif?raw=true)
 ![React Template CI](https://github.com/wednesday-solutions/react-template/workflows/React%20Template%20CI/badge.svg)
 
 ### Built using [react-floki](https://github.com/wednesday-solutions/react-floki)
